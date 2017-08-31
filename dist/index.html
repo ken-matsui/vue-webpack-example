@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>lp-service</title>
+	</head>
+
+	<body>
+		<div id="textbox">
+			<textarea v-for="(item, index) in items" v-model="items[index]"></textarea>
+			<div v-for="(copy, index) in copies"　v-html="replace(index)"></div>
+		</div>
+
+		<button id="send" v-on:click="post">SEND</button>
+
+		<script src="./bundle.js"></script>
+	</body>
+
+</html>
